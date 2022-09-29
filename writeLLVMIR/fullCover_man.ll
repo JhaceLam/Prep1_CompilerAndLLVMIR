@@ -1,6 +1,3 @@
-; ModuleID = 'main.c'
-source_filename = "main.c"
-
 @minInf = dso_local constant i32 -2147483648, align 4
 @formatstr = private unnamed_addr constant [5 x i8] c"%lf\0A\00", align 1
 @array = private unnamed_addr constant [3 x [3 x i32]] [[3 x i32] [i32 5, i32 0, i32 0], [3 x i32] [i32 -100, i32 123, i32 400], [3 x i32] [i32 -3, i32 90, i32 123]], align 16
