@@ -1,0 +1,7 @@
+0000000000000000 B answer
+                 U _GLOBAL_OFFSET_TABLE_
+                 U __isoc99_scanf
+0000000000000036 T main
+                 U printf
+                 U __stack_chk_fail
+0000000000000000 T work

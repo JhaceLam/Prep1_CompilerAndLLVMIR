@@ -1,0 +1,19 @@
+digraph "CFG for 'work' function" {
+	label="CFG for 'work' function";
+
+	Node0x17fdee0 [shape=record,label="{%1:\l  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  store i32 %0, i32* %2, align 4, !tbaa !2\l  %5 = bitcast i32* %3 to i8*\l  call void @llvm.lifetime.start.p0i8(i64 4, i8* %5) #3\l  %6 = bitcast i32* %4 to i8*\l  call void @llvm.lifetime.start.p0i8(i64 4, i8* %6) #3\l  store i32 1, i32* %4, align 4, !tbaa !2\l  store i32 2, i32* %3, align 4, !tbaa !2\l  br label %7\l}"];
+	Node0x17fdee0 -> Node0x17ffe50;
+	Node0x17ffe50 [shape=record,label="{%7:\l7:                                                \l  %8 = load i32, i32* %3, align 4, !tbaa !2\l  %9 = load i32, i32* %2, align 4, !tbaa !2\l  %10 = icmp sle i32 %8, %9\l  br i1 %10, label %11, label %21\l|{<s0>T|<s1>F}}"];
+	Node0x17ffe50:s0 -> Node0x17fe0f0;
+	Node0x17ffe50:s1 -> Node0x1800070;
+	Node0x17fe0f0 [shape=record,label="{%11:\l11:                                               \l  %12 = load i32, i32* %4, align 4, !tbaa !2\l  %13 = load i32, i32* %3, align 4, !tbaa !2\l  %14 = mul nsw i32 %12, %13\l  store i32 %14, i32* %4, align 4, !tbaa !2\l  br label %15\l}"];
+	Node0x17fe0f0 -> Node0x18002b0;
+	Node0x18002b0 [shape=record,label="{%15:\l15:                                               \l  %16 = load i32, i32* %3, align 4, !tbaa !2\l  %17 = add nsw i32 %16, 1\l  store i32 %17, i32* %3, align 4, !tbaa !2\l  %18 = load i32, i32* %3, align 4, !tbaa !2\l  %19 = load i32, i32* %2, align 4, !tbaa !2\l  %20 = icmp sle i32 %18, %19\l  br i1 %20, label %25, label %21\l|{<s0>T|<s1>F}}"];
+	Node0x18002b0:s0 -> Node0x18005e0;
+	Node0x18002b0:s1 -> Node0x1800070;
+	Node0x1800070 [shape=record,label="{%21:\l21:                                               \l  %22 = load i32, i32* %4, align 4, !tbaa !2\l  %23 = bitcast i32* %4 to i8*\l  call void @llvm.lifetime.end.p0i8(i64 4, i8* %23) #3\l  %24 = bitcast i32* %3 to i8*\l  call void @llvm.lifetime.end.p0i8(i64 4, i8* %24) #3\l  ret i32 %22\l}"];
+	Node0x18005e0 [shape=record,label="{%25:\l25:                                               \l  %26 = load i32, i32* %4, align 4, !tbaa !2\l  %27 = load i32, i32* %3, align 4, !tbaa !2\l  %28 = mul nsw i32 %26, %27\l  store i32 %28, i32* %4, align 4, !tbaa !2\l  br label %29\l}"];
+	Node0x18005e0 -> Node0x1800c90;
+	Node0x1800c90 [shape=record,label="{%29:\l29:                                               \l  %30 = load i32, i32* %3, align 4, !tbaa !2\l  %31 = add nsw i32 %30, 1\l  store i32 %31, i32* %3, align 4, !tbaa !2\l  br label %7, !llvm.loop !6\l}"];
+	Node0x1800c90 -> Node0x17ffe50;
+}
